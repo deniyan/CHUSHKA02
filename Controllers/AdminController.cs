@@ -8,8 +8,6 @@ namespace CHUSHKA02.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly RoleManager<AppUser> roleManager;
-
         public ActionResult Index()
         {
             return View();
@@ -63,30 +61,6 @@ namespace CHUSHKA02.Controllers
             {
                 return View();
             }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> CreateRole(CreateRoleModel model)
-        {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(model);
-            //}
-            //RoleManager<IdentityRole> role = 
-            //    new RoleManager<IdentityRole> { Name = model.RoleName, };
-            //var result = await roleManager.CreateAsync(role);//Add DataBase
-            //if (result.Succeeded)
-            //{
-            //    return Redirect("/");
-            //}
-            //else
-            //{
-            //    foreach (var error in result.Errors)
-            //    {
-            //        ModelState.AddModelError("", error.ToString());
-            //    }
-            //}
-            return View();
         }
     }
 }
